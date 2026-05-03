@@ -1,18 +1,19 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import Link from 'next/link'
-
-const DISCORD_ID = '1183396538140073998'
-
-type DiscordData = {
-  discord_user: {
-    avatar: string
-    username: string
-  }
-  discord_status: 'online' | 'offline' | 'idle' | 'dnd'
-}
 
 export default function HomeClient() {
-  // 🔥 ALL your existing code stays EXACTLY SAME
+  const [username, setUsername] = useState('')
+
+  useEffect(() => {
+    async function fetchData() {
+      const res = await fetch('https://api.lanyard.rest/v1/users/1183396538140073998')
+      const json = await res.json()
+      setUsername(json.data.discord_user.username)
+    }
+
+    fetchData()
+  }, [])
+
+  return <div>{username}</div>
 }
