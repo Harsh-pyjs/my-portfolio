@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+import Link from 'next/link'
 
 export default function Page() {
   const [members1, setMembers1] = useState<number | null>(null)
@@ -49,11 +50,12 @@ export default function Page() {
             <span className="text-white font-semibold text-lg">Harsh</span>
           </div>
 
+          {/* ✅ CLICKABLE NAV */}
           <div className="hidden md:flex gap-8 text-sm text-gray-200">
-            <span className="cursor-pointer hover:text-white">Home</span>
-            <span className="cursor-pointer hover:text-white">Experience</span>
-            <span className="cursor-pointer hover:text-white">Production</span>
-            <span className="cursor-pointer hover:text-white">Testimonials</span>
+            <Link href="/" className="hover:text-white">Home</Link>
+            <Link href="/experience" className="hover:text-white">Experience</Link>
+            <Link href="/production" className="hover:text-white">Production</Link>
+            <Link href="/testimonials" className="hover:text-white">Testimonials</Link>
           </div>
 
           <button className="bg-white/20 hover:bg-white/30 px-4 py-1.5 rounded-xl text-sm">
@@ -71,11 +73,10 @@ export default function Page() {
       <div className="flex items-center justify-center min-h-screen pt-40 px-10">
         <div className="flex gap-8 flex-wrap justify-center">
 
-          {/* 🔹 AlphaMC */}
+          {/* AlphaMC */}
           <div className="w-[260px] h-[200px] rounded-2xl bg-white/5 backdrop-blur-xl border border-white/10 p-5 hover:bg-white/10 transition-all duration-300 hover:shadow-[0_0_18px_rgba(255,255,255,0.15)]">
             <div className="flex justify-between items-start">
               <img src="/alphamc.png" className="w-12 h-12 rounded-lg" />
-
               <span className="text-[11px] font-semibold px-5 py-[3px] rounded-full bg-[#0b2e1f] text-green-400 border border-green-500/25 flex items-center gap-2">
                 <span className="w-2 h-2 rounded-full bg-green-400"></span>
                 ACTIVE
@@ -91,11 +92,10 @@ export default function Page() {
             </div>
           </div>
 
-          {/* 🔹 FriendsSMP */}
+          {/* FriendsSMP */}
           <div className="w-[260px] h-[200px] rounded-2xl bg-white/5 backdrop-blur-xl border border-white/10 p-5 hover:bg-white/10 transition-all duration-300 hover:shadow-[0_0_18px_rgba(255,255,255,0.15)]">
             <div className="flex justify-between items-start">
               <img src="/friends.png" className="w-12 h-12 rounded-lg" />
-
               <span className="text-[11px] font-semibold px-5 py-[3px] rounded-full bg-[#0b2e1f] text-green-400 border border-green-500/25 flex items-center gap-2">
                 <span className="w-2 h-2 rounded-full bg-green-400"></span>
                 ACTIVE
@@ -111,11 +111,10 @@ export default function Page() {
             </div>
           </div>
 
-          {/* 🔹 Quinx */}
+          {/* Quinx */}
           <div className="w-[260px] h-[200px] rounded-2xl bg-white/5 backdrop-blur-xl border border-white/10 p-5 hover:bg-white/10 transition-all duration-300 hover:shadow-[0_0_18px_rgba(255,255,255,0.15)]">
             <div className="flex justify-between items-start">
               <img src="/quinx.png" className="w-12 h-12 rounded-lg" />
-
               <span className="text-[11px] font-semibold px-5 py-[3px] rounded-full bg-[#2b0f0f] text-red-400 border border-red-500/25 flex items-center gap-2">
                 <span className="w-2 h-2 rounded-full bg-red-400"></span>
                 INACTIVE
@@ -131,11 +130,10 @@ export default function Page() {
             </div>
           </div>
 
-          {/* 🔹 Omex */}
+          {/* Omex */}
           <div className="w-[260px] h-[200px] rounded-2xl bg-white/5 backdrop-blur-xl border border-white/10 p-5 hover:bg-white/10 transition-all duration-300 hover:shadow-[0_0_18px_rgba(255,255,255,0.15)]">
             <div className="flex justify-between items-start">
               <img src="/omex.png" className="w-12 h-12 rounded-lg" />
-
               <span className="text-[11px] font-semibold px-5 py-[3px] rounded-full bg-[#2b0f0f] text-red-400 border border-red-500/25 flex items-center gap-2">
                 <span className="w-2 h-2 rounded-full bg-red-400"></span>
                 INACTIVE
@@ -153,18 +151,18 @@ export default function Page() {
 
         </div>
       </div>
-    
-    {/* 🔻 Footer */}
-<div className="fixed bottom-5 right-6 z-20">
-  <div className="text-[11px] text-blue-200 text-right leading-tight
-                  px-3 py-2 rounded-xl
-                  bg-blue-500/10 backdrop-blur-md
-                  border border-blue-400/20
-                  shadow-[0_0_12px_rgba(59,130,246,0.15)]">
-    <p className="font-medium">Made by Harsh</p>
-    <p className="text-blue-300/80">© 2026 All rights reserved</p>
-  </div>
-</div>
+
+      {/* 🔻 Footer */}
+      <div className="fixed bottom-5 right-6 z-20">
+        <div className="text-[11px] text-blue-200 text-right leading-tight
+                        px-3 py-2 rounded-xl
+                        bg-blue-500/10 backdrop-blur-md
+                        border border-blue-400/20
+                        shadow-[0_0_12px_rgba(59,130,246,0.15)]">
+          <p className="font-medium">Made by Harsh</p>
+          <p className="text-blue-300/80">© 2026 All rights reserved</p>
+        </div>
+      </div>
 
     </main>
   )
