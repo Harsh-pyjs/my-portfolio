@@ -1,3 +1,6 @@
+export const metadata = {
+  title: 'Home',
+}
 'use client'
 
 import { useEffect, useState } from 'react'
