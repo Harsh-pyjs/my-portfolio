@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+import Link from 'next/link'
 
 const DISCORD_ID = '1183396538140073998'
 
@@ -88,10 +89,23 @@ export default function Home() {
           </div>
 
           <div className="hidden md:flex gap-8 text-sm text-gray-200">
-            <span>Home</span>
-            <span>Experience</span>
-            <span>Production</span>
-            <span>Testimonials</span>
+            <div className="hidden md:flex gap-8 text-sm text-gray-200">
+  <Link href="/" className="cursor-pointer hover:text-white">
+    Home
+  </Link>
+
+  <Link href="/experience" className="cursor-pointer hover:text-white">
+    Experience
+  </Link>
+
+  <Link href="/production" className="cursor-pointer hover:text-white">
+    Production
+  </Link>
+
+  <Link href="/testimonials" className="cursor-pointer hover:text-white">
+    Testimonials
+  </Link>
+</div>
           </div>
 
           <button className="bg-white/20 hover:bg-white/30 px-4 py-1.5 rounded-xl text-sm">
