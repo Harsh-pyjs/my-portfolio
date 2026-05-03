@@ -1,9 +1,8 @@
-'use client'
-import HomeClient from './HomeClient'
-
 export const metadata = {
   title: 'Home',
 }
+
+import HomeClient from './HomeClient'
 
 export default function Page() {
   return <HomeClient />
