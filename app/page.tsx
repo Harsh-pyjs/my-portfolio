@@ -1,7 +1,11 @@
-'use client'
+import HomeClient from './HomeClient'
 
 export const metadata = {
   title: 'Home',
+}
+
+export default function Page() {
+  return <HomeClient />
 }
 
 import { useEffect, useState } from 'react'
