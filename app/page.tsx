@@ -7,6 +7,7 @@ import HomeClient from './HomeClient'
 export default function Page() {
   return <HomeClient />
 }
+export const metadata = { title: 'Home' }
 
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
