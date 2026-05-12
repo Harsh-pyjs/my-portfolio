@@ -92,17 +92,17 @@ export default function Page() {
             </div>
           </div>
 
-          {/* FriendsSMP */}
+          {/* HeartFall */}
           <div className="w-[260px] h-[200px] rounded-2xl bg-white/5 backdrop-blur-xl border border-white/10 p-5 hover:bg-white/10 transition-all duration-300 hover:shadow-[0_0_18px_rgba(255,255,255,0.15)]">
             <div className="flex justify-between items-start">
-              <img src="/friends.png" className="w-12 h-12 rounded-lg" />
+              <img src="/Heartfall.png" className="w-12 h-12 rounded-lg" />
               <span className="text-[11px] font-semibold px-5 py-[3px] rounded-full bg-[#0b2e1f] text-green-400 border border-green-500/25 flex items-center gap-2">
                 <span className="w-2 h-2 rounded-full bg-green-400"></span>
                 ACTIVE
               </span>
             </div>
 
-            <h2 className="mt-4 text-lg font-semibold">FriendsSMP</h2>
+            <h2 className="mt-4 text-lg font-semibold">HeartFall</h2>
             <p className="text-gray-400 text-xs font-semibold">OWNER / DEV</p>
 
             <div className="flex justify-between mt-6 text-xs text-gray-400">
